@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+   <link rel="stylesheet" href="normalize.css">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <title>Game</title>
+  <style>
+    *{
+      margin: 0px;
+      padding: 0px;
+    }
+
+    html,body{
+      width: 100%;
+      height: 100%;
+    }
+
+    i{
+      font-size: 42px !important;
+      line-height: 115% !important;
+    }
+
+    .clear{
+      clear: both;
+    }
+
+    .game_field{
+      width: 100%;
+      height: 100%;
+      margin-left: 1.5%;
+      padding-top: 20%;
+      box-sizing: border-box;
+    }
+
+    .game_field_row{
+      width: 100%;
+      height: 8%;
+    }
+
+    .game_field_cell{
+      float: left;
+      width: 14%;
+      height: 100%;
+      border: 1px solid #8e8e8e;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .green{
+      background-color: #3abb3a;
+    }
+
+    .blue{
+      background-color: #4792d2;
+    }
+
+    .red{
+      background-color: #cc1e1e;
+    }
+
+    .gold{
+      background-color: #eccd26;
+    }
+
+    .active_btn{
+      box-shadow: 0px 0px 10px 3px #000;
+    }
+  </style>
+ </head>
+
+ <body>
+   <div class="game_field" id="gameField">
+     <div class="game_field_row">
+       <div class="game_field_cell"></div>
+       <div class="game_field_cell"></div>
+       <div class="game_field_cell blue" data-player="2" data-color="blue"><i class="material-icons">close</i></div>
+       <div class="game_field_cell gold" data-player="2" data-color="gold"><i class="material-icons">close</i></div>
+       <div class="game_field_cell blue" data-player="2" data-color="blue"><i class="material-icons">close</i></div>
+       <div class="game_field_cell"></div>
+       <div class="game_field_cell"></div>
+       <div class="clear"></div>
+     </div>
+
+     <div class="game_field_row">
+       <div class="game_field_cell"></div>
+       <div class="game_field_cell"></div>
+       <div class="game_field_cell green" data-player="2" data-color="green"><i class="material-icons">close</i></div>
+       <div class="game_field_cell"><i class="material-icons">favorite</i></div>
+       <div class="game_field_cell green" data-player="2" data-color="green"><i class="material-icons">close</i></div>
+       <div class="game_field_cell"></div>
+       <div class="game_field_cell"></div>
+       <div class="clear"></div>
+     </div>
+
+     <div class="game_field_row">
+       <div class="game_field_cell"></div>
+       <div class="game_field_cell"></div>
+       <div class="game_field_cell red" data-player="2" data-color="red"><i class="material-icons">close</i></div>
+       <div class="game_field_cell gold" data-player="2" data-color="gold"><i class="material-icons">close</i></div>
+       <div class="game_field_cell red" data-player="2" data-color="red"><i class="material-icons">close</i></div>
+       <div class="game_field_cell"></div>
+       <div class="game_field_cell"></div>
+       <div class="clear"></div>
+     </div>
+
+     <div class="game_field_row">
+       <div class="game_field_cell"></div>
+       <div class="game_field_cell"></div>
+       <div class="game_field_cell"></div>
+       <div class="game_field_cell"></div>
+       <div class="game_field_cell"></div>
+       <div class="game_field_cell"></div>
+       <div class="game_field_cell"></div>
+       <div class="clear"></div>
+     </div>
+
+     <div class="game_field_row">
+       <div class="game_field_cell"></div>
+       <div class="game_field_cell"></div>
+       <div class="game_field_cell"></div>
+       <div class="game_field_cell"></div>
+       <div class="game_field_cell"></div>
+       <div class="game_field_cell"></div>
+       <div class="game_field_cell"></div>
+       <div class="clear"></div>
+     </div>
+
+     <div class="game_field_row">
+       <div class="game_field_cell"></div>
+       <div class="game_field_cell"></div>
+       <div class="game_field_cell"></div>
+       <div class="game_field_cell"></div>
+       <div class="game_field_cell"></div>
+       <div class="game_field_cell"></div>
+       <div class="game_field_cell"></div>
+       <div class="clear"></div>
+     </div>
+
+     <div class="game_field_row">
+       <div class="game_field_cell"></div>
+       <div class="game_field_cell"></div>
+       <div class="game_field_cell"></div>
+       <div class="game_field_cell"></div>
+       <div class="game_field_cell"></div>
+       <div class="game_field_cell"></div>
+       <div class="game_field_cell"></div>
+       <div class="clear"></div>
+     </div>
+
+     <div class="game_field_row">
+       <div class="game_field_cell"></div>
+       <div class="game_field_cell"></div>
+       <div class="game_field_cell blue" data-player="1" data-color="blue"><i class="material-icons">fiber_manual_record</i></div>
+       <div class="game_field_cell gold" data-player="1" data-color="gold"><i class="material-icons">fiber_manual_record</i></div>
+       <div class="game_field_cell blue" data-player="1" data-color="blue"><i class="material-icons">fiber_manual_record</i></div>
+       <div class="game_field_cell"></div>
+       <div class="game_field_cell"></div>
+       <div class="clear"></div>
+     </div>
+
+     <div class="game_field_row">
+       <div class="game_field_cell"></div>
+       <div class="game_field_cell"></div>
+       <div class="game_field_cell green" data-player="1" data-color="green"><i class="material-icons">fiber_manual_record</i></div>
+       <div class="game_field_cell"><i class="material-icons">favorite</i></div>
+       <div class="game_field_cell green" data-player="1" data-color="green"><i class="material-icons">fiber_manual_record</i></div>
+       <div class="game_field_cell"></div>
+       <div class="game_field_cell"></div>
+       <div class="clear"></div>
+     </div>
+
+     <div class="game_field_row">
+       <div class="game_field_cell"></div>
+       <div class="game_field_cell"></div>
+       <div class="game_field_cell red" data-player="1" data-color="red"><i class="material-icons">fiber_manual_record</i></div>
+       <div class="game_field_cell gold" data-player="1" data-color="gold"><i class="material-icons">fiber_manual_record</i></div>
+       <div class="game_field_cell red" data-player="1" data-color="red"><i class="material-icons">fiber_manual_record</i></div>
+       <div class="game_field_cell"></div>
+       <div class="game_field_cell"></div>
+       <div class="clear"></div>
+     </div>
+   </div>
+
+   <script>
+   function checkBtn(clickedBtn, btnListId, targetBtn){
+     while(clickedBtn.id != btnListId){
+       if(clickedBtn.classList.contains(targetBtn)){
+         return clickedBtn;
+       }
+       clickedBtn = clickedBtn.parentNode;
+     }
+     return false;
+   }
+
+   /*
+   document.querySelector("#gameField").addEventListener("click", function() {
+     console.time("m");
+     if (event.target.classList.contains("game_field_cell")) {
+
+     }
+     console.timeEnd("m");
+   });
+   */
+
+   var currentColor = "";
+   var currentBtn = "";
+
+   function btnClick(){
+     var btn = this;
+     var color = btn.getAttribute("data-color");
+
+     if (color) {
+       console.log("цвет");
+       currentColor = color;
+       currentBtn = btn;
+       if (document.querySelector(".active_btn")) {
+         document.querySelector(".active_btn").classList.remove("active_btn");
+       }
+       btn.classList.add("active_btn");
+
+     } else if (currentColor) {
+       console.log("ткнули не в цвет, но ранее он был задан");
+       btn.classList.add(currentColor);
+       currentBtn.classList.remove("active_btn");
+       currentBtn.classList.remove(currentColor);
+
+       btn.setAttribute("data-color", currentColor);
+       currentBtn.removeAttribute("data-color");
+
+       btn.innerHTML = currentBtn.innerHTML;
+       currentBtn.innerHTML = "";
+
+       currentColor = "";
+       currentBtn = "";
+
+     } else {
+       console.log("ok");
+     }
+   }
+
+   //console.time("n");
+   document.querySelectorAll(".game_field_cell").forEach(function(el) {
+     el.addEventListener("click", btnClick);
+   });
+   //console.timeEnd("n");
+
+   </script>
+
+ </body>
+</html>
